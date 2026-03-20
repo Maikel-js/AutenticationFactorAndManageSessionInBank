@@ -2,10 +2,8 @@ using System.Security.Claims;
 using System.Threading.RateLimiting;
 using AutenticationFactorAndManageSessionInBank.Api.Contracts;
 using AutenticationFactorAndManageSessionInBank.Api.Security;
-using AutenticationFactorAndManageSessionInBank.Application;
 using AutenticationFactorAndManageSessionInBank.Application.Contracts.Authentication;
 using AutenticationFactorAndManageSessionInBank.Application.Services;
-using AutenticationFactorAndManageSessionInBank.Infrastructure;
 using AutenticationFactorAndManageSessionInBank.Infrastructure.Configuration;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
@@ -14,8 +12,8 @@ using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddApplication();
-builder.Services.AddInfrastructure(builder.Configuration);
+AutenticationFactorAndManageSessionInBank.Application.DependencyInjection.AddApplication(builder.Services);
+AutenticationFactorAndManageSessionInBank.Infrastructure.DependencyInjection.AddInfrastructure(builder.Services, builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddProblemDetails();
