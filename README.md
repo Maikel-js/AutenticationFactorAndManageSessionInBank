@@ -1,1 +1,2 @@
 # AutenticationFactorAndManageSessionInBank
+Este proyecto esta diseñado cmo una muestra y un aprendizaje aportando a la  seccion bancaria a nivel internacional, y como una oportunidad a mi mismo para ayudarme a demostrar que si me enfoco puedo con todo
