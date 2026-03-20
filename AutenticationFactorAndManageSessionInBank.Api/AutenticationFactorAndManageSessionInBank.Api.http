@@ -1,0 +1,6 @@
+@AutenticationFactorAndManageSessionInBank.Api_HostAddress = http://localhost:5140
+
+GET {{AutenticationFactorAndManageSessionInBank.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,28 @@
+# dotnet
+bin/
+obj/
+
+# node
+node_modules/
+.next/
+coverage/
+
+# env and secrets
+.env
+.env.*
+!.env.example
+*.pfx
+*.key
+*.pem
+secrets/
+
+# local tooling
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# repo temp
+.temp/
+.nuget-packages/
+auth.db
